@@ -45,4 +45,4 @@ async function remove(req, res, next) {
     }
 }
 
-module.exports = { list, getById, create, uptade, remove };
+module.exports = { list, getById, create, update, remove };

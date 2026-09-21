@@ -6,7 +6,7 @@ async function seedAdmin() {
     const { name, email, password } = env.admin;
 
     if (!name || !email || !password) {
-        console.log('Seed de admin omitido: ADMIN_NAME/ADMIN_EMAIL/ADMIN_PASSWORD no configurado');
+        console.log('Seed de admin omitido: ADMIN_NAME/ADMIN_EMAIL/ADMIN_PASSWORD no configurados');
     return;
 }
 
@@ -27,7 +27,7 @@ await pool.execute(
     [name, email, hash, 'admin']
 );
 
- console.log(`Usuario aadmin creado: ${email}`);
+ console.log(`Usuario admin creado: ${email}`);
 }
 
 module.exports = seedAdmin;

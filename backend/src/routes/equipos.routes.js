@@ -1,11 +1,11 @@
 const express = require('express');
 const controller = require('../controllers/equipos.controller');
-const { autheticate, authorize } = require('../middlewares/auth.middleware');
+const { authenticate, authorize } = require('../middlewares/auth.middleware');
 const { uploadEquipoImagen} = require('../middlewares/upload.middleware');
 
 const router = express.Router();
 
-router.use(autheticate);
+router.use(authenticate);
 
 router.get('/', controller.list);
 router.get('/:id', controller.getById);
